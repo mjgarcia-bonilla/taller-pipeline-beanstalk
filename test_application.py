@@ -8,7 +8,7 @@ def test_lista_heroes():
 def test_un_heroe():
     r = application.test_client().get("/0")
     assert r.status_code == 200
-    assert r.get_json()["name"] == "B-Bomb"
+    assert r.get_json()["name"] == "A-Bomb"
 
 def test_heroe_inexistente():
     r = application.test_client().get("/9999")
